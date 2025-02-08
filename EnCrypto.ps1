@@ -6,5 +6,5 @@ $AES.Key = $Key
 $AES.IV = $IV
 $Encryptor = $AES.CreateEncryptor()
 $InputFile = "Input_File_Path"
-$OutputFile = Input_File_Path"
+$OutputFile = "Output_File_Path"
 $FileBytes = [System.IO.File]::ReadAllBytes($InputFile)
