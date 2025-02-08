@@ -8,3 +8,5 @@ $Encryptor = $AES.CreateEncryptor()
 $InputFile = "Input_File_Path"
 $OutputFile = "Output_File_Path"
 $FileBytes = [System.IO.File]::ReadAllBytes($InputFile)
+$DecryptedBytes = $Decryptor.TransformFinalBlock($FileBytes, 0, $FileBytes.Length)
+[System.IO.File]::WriteAllBytes($OutputFile, $DecryptedBytes)
